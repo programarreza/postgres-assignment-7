@@ -15,5 +15,19 @@ CREATE TABLE students(
 )
 
 
+-- courses table creation 
+CREATE TABLE courses(
+	course_id SERIAL PRIMARY KEY,
+	course_name VARCHAR(100) NOT NULL,
+	credits INT NOT NULL
+)
 
-SELECT * FROM students
+-- enrolment table creation
+CREATE TABLE enrollment(
+	enrollment_id SERIAL PRIMARY KEY,
+	student_id INT REFERENCES students (student_id) NOT NULL,
+	course_id INT REFERENCES courses (course_id) NOT NULL
+)
+
+
+SELECT * FROM enrollment
