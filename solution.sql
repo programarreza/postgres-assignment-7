@@ -100,6 +100,13 @@ GROUP BY c.course_name
 
 
 
+-- Query 7:
+SELECT AVG(age) AS average_age
+FROM students
+
+
+
+
 SELECT * FROM students; 
 SELECT * FROM courses; 
 SELECT * FROM enrollment; 
