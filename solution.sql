@@ -106,6 +106,12 @@ FROM students
 
 
 
+-- Query 8:
+SELECT student_name
+FROM students
+WHERE email LIKE '%example.com%'
+ORDER BY student_id
+
 
 SELECT * FROM students; 
 SELECT * FROM courses; 
