@@ -86,6 +86,12 @@ WHERE course_id NOT IN (
 )
 
 
+-- Query 5:
+SELECT student_name FROM students
+ORDER BY student_id
+LIMIT 2
+OFFSET 2;
+
 
 
 SELECT * FROM students; 
