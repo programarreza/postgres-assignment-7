@@ -57,6 +57,15 @@ VALUES
 (1, 1),
 (1, 2),
 (2, 1),
-(3, 2)
+(3, 2);
 
-SELECT * FROM students
+
+-- Query 2:
+SELECT s.student_name FROM students s
+JOIN enrollment e ON s.student_id = e.student_id
+JOIN courses c ON e.course_id = c.course_id
+WHERE c.course_name = 'Next.js';
+
+
+
+SELECT * FROM enrollment 
