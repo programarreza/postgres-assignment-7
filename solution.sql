@@ -78,5 +78,16 @@ WHERE student_id = (
 )
 
 
+-- Query 4:
+DELETE FROM courses
+WHERE course_id NOT IN (
+	SELECT DISTINCT course_id
+	FROM enrollment
+)
 
-SELECT * FROM students 
+
+
+
+SELECT * FROM students; 
+SELECT * FROM courses; 
+SELECT * FROM enrollment; 
