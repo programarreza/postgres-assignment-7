@@ -67,5 +67,16 @@ JOIN courses c ON e.course_id = c.course_id
 WHERE c.course_name = 'Next.js';
 
 
+-- Query 3:
+UPDATE students
+SET status = 'Awarded'
+WHERE student_id = (
+	SELECT student_id
+	FROM students
+	ORDER BY (frontend_mark + backend_mark) DESC
+	LIMIT 1
+)
 
-SELECT * FROM enrollment 
+
+
+SELECT * FROM students 
